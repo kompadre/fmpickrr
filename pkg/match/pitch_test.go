@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/kompadre/fmguessr/pkg/match"
+	"github.com/kompadre/fmpickrr/pkg/match"
 )
 
 func TestChiptuneCoinWavPitchAndPitchEG(t *testing.T) {

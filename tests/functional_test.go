@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/kompadre/fmguessr/pkg/match"
+	"github.com/kompadre/fmpickrr/pkg/match"
 )
 
 func TestEndToEndPipeline(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kompadre/fmguessr/pkg/match"
+	"github.com/kompadre/fmpickrr/pkg/match"
 )
 
 // TestRegressionEncodeDecodeRoundTrip verifies that Encode→Decode is lossless

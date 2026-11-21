@@ -13,7 +13,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/kompadre/fmguessr/external/msfa"
+	"github.com/kompadre/fmpickrr/external/msfa"
 )
 
 // CodebookEntry represents a pre-computed patch thumbnail in the index.

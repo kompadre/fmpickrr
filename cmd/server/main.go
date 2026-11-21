@@ -19,7 +19,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/kompadre/fmguessr/pkg/match"
+	"github.com/kompadre/fmpickrr/pkg/match"
 )
 
 type ServerConfig struct {
@@ -1144,7 +1144,7 @@ func main() {
 	mux.HandleFunc("/html/", server.handleStatic)
 	mux.HandleFunc("/", server.handleIndex)
 
-	fmt.Printf("fmguessr REST API Server listening on http://localhost:%d\n", cfg.Port)
+	fmt.Printf("fmpickrr REST API Server listening on http://localhost:%d\n", cfg.Port)
 	fmt.Printf("  Max Queue: %d, Generations: %d, Population: %d\n", cfg.MaxQueue, cfg.Generations, cfg.Population)
 	if cfg.BudgetSeconds > 0 {
 		fmt.Printf("  Budget: %.1fs\n", cfg.BudgetSeconds)

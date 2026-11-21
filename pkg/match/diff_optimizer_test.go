@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kompadre/fmguessr/pkg/match"
+	"github.com/kompadre/fmpickrr/pkg/match"
 )
 
 func TestDiffOptimizerExactMatch(t *testing.T) {

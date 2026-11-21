@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kompadre/fmguessr/pkg/match"
+	"github.com/kompadre/fmpickrr/pkg/match"
 )
 
 func TestPOCOptimizerExactMatch(t *testing.T) {

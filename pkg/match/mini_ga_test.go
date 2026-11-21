@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kompadre/fmguessr/pkg/match"
+	"github.com/kompadre/fmpickrr/pkg/match"
 )
 
 func TestOperatorMiniGA(t *testing.T) {

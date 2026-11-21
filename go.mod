@@ -1,4 +1,4 @@
-module github.com/kompadre/fmguessr
+module github.com/kompadre/fmpickrr
 
 go 1.25.5
 

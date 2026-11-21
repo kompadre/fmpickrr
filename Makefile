@@ -1,4 +1,4 @@
-# fmguessr Makefile
+# fmpickrr Makefile
 
 .PHONY: all match index play morph server release deploy docker-build test test-unit test-e2e clean
 
@@ -37,7 +37,7 @@ deploy: release
 	@ls -lh deploy/app/
 
 docker-build: deploy
-	docker build -t fmguessr -f deploy/Dockerfile deploy/app/
+	docker build -t fmpickrr -f deploy/Dockerfile deploy/app/
 
 docker-up:
 	cd deploy && docker compose up -d

@@ -1,13 +1,13 @@
 Fmguessr: A Codebase Audio Tour
 
-Welcome to this architectural walkthrough of fmguessr. This is a system that listens to audio and reverse-engineers the FM synthesizer settings needed to recreate that sound — specifically for the Yamaha DX7, a legendary synthesizer from nineteen eighty-three. You give it a WAV file, and through a combination of evolutionary search, hill-climbing, and signal processing, it produces a DX7 patch file that sounds like your target.
+Welcome to this architectural walkthrough of fmpickrr. This is a system that listens to audio and reverse-engineers the FM synthesizer settings needed to recreate that sound — specifically for the Yamaha DX7, a legendary synthesizer from nineteen eighty-three. You give it a WAV file, and through a combination of evolutionary search, hill-climbing, and signal processing, it produces a DX7 patch file that sounds like your target.
 
 Let's start from the center of the system and work outward.
 
 
 Chapter One: The Candidate
 
-Everything in fmguessr revolves around a single data structure called the Candidate. Think of it as a complete description of one DX7 synthesizer patch. It holds the algorithm number, which is an integer from zero to thirty-one selecting one of the DX7's thirty-two operator routing topologies. It holds six operator parameter blocks, each containing the frequency coarse and fine settings, the output level, and the four-stage envelope — attack rate, decay rate, sustain level, and release rate. It holds a feedback amount from zero to seven, and three pitch envelope parameters.
+Everything in fmpickrr revolves around a single data structure called the Candidate. Think of it as a complete description of one DX7 synthesizer patch. It holds the algorithm number, which is an integer from zero to thirty-one selecting one of the DX7's thirty-two operator routing topologies. It holds six operator parameter blocks, each containing the frequency coarse and fine settings, the output level, and the four-stage envelope — attack rate, decay rate, sustain level, and release rate. It holds a feedback amount from zero to seven, and three pitch envelope parameters.
 
 The Candidate also carries a 128-byte raw base template. This is a complete DX7 bulk dump patch — the exact byte layout the hardware expects. When a Candidate is created from a codebook entry or another seeded source, it stores the original patch bytes so that parameters like LFO settings, pitch envelope scaling, and keyboard scaling — things the optimizer doesn't touch — are preserved through the optimization process. The Encode method overlays the tuned operator parameters onto this template and returns a finished 128-byte patch ready for the synthesizer.
 
@@ -133,6 +133,6 @@ The browser interface is a vanilla JavaScript application with no framework. The
 
 Closing
 
-That's the full signal flow of fmguessr. Audio enters as a WAV file. Features are extracted — pitch, envelope, formants, brightness. Nine pipeline steps progressively narrow the search space: codebook lookup for instant matches, formant-guided and sweep-based candidate generation, beam search and constructive methods for novel candidates, a genetic algorithm for broad exploration, and gradient-based optimizers for fine-tuning. Each step contributes its best results to a shared cohort, sorted and deduplicated after every iteration. The final output is a DX7 sysex file — a patch that, when loaded into a synthesizer, recreates the target sound.
+That's the full signal flow of fmpickrr. Audio enters as a WAV file. Features are extracted — pitch, envelope, formants, brightness. Nine pipeline steps progressively narrow the search space: codebook lookup for instant matches, formant-guided and sweep-based candidate generation, beam search and constructive methods for novel candidates, a genetic algorithm for broad exploration, and gradient-based optimizers for fine-tuning. Each step contributes its best results to a shared cohort, sorted and deduplicated after every iteration. The final output is a DX7 sysex file — a patch that, when loaded into a synthesizer, recreates the target sound.
 
 The system is designed so that any step can short-circuit the pipeline if it finds a confident answer, and every step gracefully degrades if its prerequisites aren't available. The codebook is optional. The beam search and CSPOA steps are optional. The pipeline adapts to whatever resources it has.

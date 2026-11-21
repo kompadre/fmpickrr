@@ -3,7 +3,7 @@ package match
 import (
 	"time"
 
-	"github.com/kompadre/fmguessr/external/msfa"
+	"github.com/kompadre/fmpickrr/external/msfa"
 )
 
 // RenderSampleRate is the fixed sample rate used for rendering.

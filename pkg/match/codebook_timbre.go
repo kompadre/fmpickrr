@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/kompadre/fmguessr/external/msfa"
+	"github.com/kompadre/fmpickrr/external/msfa"
 )
 
 // TimbreCodebookEntry represents a pre-computed timbre thumbnail.

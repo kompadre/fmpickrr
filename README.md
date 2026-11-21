@@ -1,4 +1,4 @@
-# fmguessr
+# fmpickrr (simplified fmguessr fork)
 
 DX7 FM synthesizer patch matcher. Uses genetic algorithms, formant analysis, and hill-climbing to match target audio WAV files and generate DX7 `.syx` bank files.
 

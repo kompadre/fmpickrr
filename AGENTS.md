@@ -40,7 +40,7 @@ go test -race ./pkg/match/...        # Race detector
 
 ## Architecture
 
-`fmguessr` matches DX7 FM patches to target audio via genetic algorithms.
+`fmpickrr` matches DX7 FM patches to target audio via genetic algorithms.
 
 ### Matcher Pipeline
 

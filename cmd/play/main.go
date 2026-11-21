@@ -11,9 +11,9 @@ import (
 
 	"github.com/go-audio/audio"
 	"github.com/go-audio/wav"
-	"github.com/kompadre/fmguessr/external/miniaudio"
-	"github.com/kompadre/fmguessr/external/msfa"
-	"github.com/kompadre/fmguessr/pkg/match"
+	"github.com/kompadre/fmpickrr/external/miniaudio"
+	"github.com/kompadre/fmpickrr/external/msfa"
+	"github.com/kompadre/fmpickrr/pkg/match"
 )
 
 const (
