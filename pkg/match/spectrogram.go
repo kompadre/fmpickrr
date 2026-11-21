@@ -49,7 +49,7 @@ func getHannWindow(n int) []float64 {
 }
 
 // ComputeMelSpectrogram extracts a 128×128 mel spectrogram from PCM audio.
-// The output is normalized to [0, 1] and matches the Python training pipeline exactly.
+// The output is normalized to [0, 1].
 func ComputeMelSpectrogram(samples []float64, sampleRate int) [melSpecSize][melSpecSize]float64 {
 	var result [melSpecSize][melSpecSize]float64
 

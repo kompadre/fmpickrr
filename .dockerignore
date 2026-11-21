@@ -1,11 +1,7 @@
 .git
-data/
 *.syx
 *.wav
-*.py
 *.log
 exports/
-scripts/
-rendered_*/
 test_*/
 go.work

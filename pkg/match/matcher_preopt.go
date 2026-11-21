@@ -7,9 +7,8 @@ import (
 )
 
 // PreOptimize runs the LiveOptimizer + DiffOptimizer pair on the best
-// candidate available (sweep seed or cohort best). It replaces the old
-// NN-seeded refinement step; it also populates State.LiveOpt, which the
-// GA uses for permutation candidate generation.
+// candidate available (sweep seed or cohort best). It also populates
+// State.LiveOpt, which the GA uses for permutation candidate generation.
 type PreOptimize struct{}
 
 func (s *PreOptimize) Name() string { return "PreOptimize" }

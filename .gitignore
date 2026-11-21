@@ -3,32 +3,23 @@
 /index
 /play
 /server
-/generate
 /morph
 
 # Local dirs
-/external
 /assets
 /html
-/data
 /deploy
-/inferred
-/encoder_wavs
 /.opencode
 
-# Test Artifacts and Temporary Files
+# Generated indices and test artifacts
+/*.bin
+/*.bin.*
 /test_*
 /*.wav
 /*.syx
 /*.npy
 /exports/
-/rendered_*/
-/rendered/
-/scripts/.venv
 /*.log
-/lib/
-__pycache__/
-*.pyc
 
 # Go workspace
 /go.work
